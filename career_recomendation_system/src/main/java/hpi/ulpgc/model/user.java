@@ -3,7 +3,7 @@ package hpi.ulpgc.model;
 import java.util.Arrays;
 
 public class User {
-    private Long id;
+    private final Long id;
     private String name;
     private String email;
     private String password;
@@ -42,10 +42,6 @@ public class User {
 
     public String[] getGoals() {
         return goals;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public void setName(String name) {

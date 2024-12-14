@@ -5,15 +5,15 @@ public class FreelanceListing {
     private String category;
     private String description;
     private Double price;
-    private String Location;
-    private String postedBy;
+    private String location;
+    private User postedBy;
 
-    public FreelanceListing(String title, String category, String description, Double price, String Location, String postedBy) {
+    public FreelanceListing(String title, String category, String description, Double price, String location, User postedBy) {
         this.title = title;
         this.category = category;
         this.description = description;
         this.price = price;
-        this.Location = Location;
+        this.location = location;
         this.postedBy = postedBy;
     }
 
@@ -34,10 +34,10 @@ public class FreelanceListing {
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
-    public String getPostedBy() {
+    public User getPostedBy() {
         return postedBy;
     }
 
@@ -57,11 +57,11 @@ public class FreelanceListing {
         this.price = price;
     }
 
-    public void setLocation(String Location) {
-        this.Location = Location;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public void setPostedBy(String postedBy) {
+    public void setPostedBy(User postedBy) {
         this.postedBy = postedBy;
     }
 }

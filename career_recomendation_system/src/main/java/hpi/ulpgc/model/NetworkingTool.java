@@ -1,8 +1,8 @@
 package hpi.ulpgc.model;
 
 public class NetworkingTool {
-    public String user1;
-    public String user2;
+    private final String user1;
+    private final String user2;
 
     public NetworkingTool(String user1, String user2) {
         this.user1 = user1;
