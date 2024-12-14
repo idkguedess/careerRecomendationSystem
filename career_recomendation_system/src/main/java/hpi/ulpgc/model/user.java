@@ -13,13 +13,16 @@ public class User {
     private final List<String> skills;
     private final List<String> goals;
 
-    public User(String name, String email, String password, String[] skills, String[] goals) {
+    private Revenue revenue;
+
+    public User(String name, String email, String password, String[] skills, String[] goals, Revenue revenue) {
         this.id = NEXT_ID++;
         this.name = name;
         this.email = email;
         this.password = password;
         this.skills = new ArrayList<>();
         this.goals = new ArrayList<>();
+        this.revenue = revenue;
     }
 
     public int getId() {
@@ -46,6 +49,10 @@ public class User {
         return goals;
     }
 
+    public Revenue getRevenue() {
+        return revenue;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -67,6 +74,10 @@ public class User {
         goals.add(goal);
     }
 
+    public void setRevenue(Revenue revenue) {
+        this.revenue = revenue;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -76,6 +87,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", skills=" + skills +
                 ", goals=" + goals +
+                ", revenue=" + revenue +
                 '}';
     }
 }
