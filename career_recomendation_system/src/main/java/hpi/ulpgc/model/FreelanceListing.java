@@ -8,7 +8,7 @@ public class FreelanceListing {
     private String Location;
     private String postedBy;
 
-    public void FreelanceListing(String title, String category, String description, Double price, String Location, String postedBy) {
+    public FreelanceListing(String title, String category, String description, Double price, String Location, String postedBy) {
         this.title = title;
         this.category = category;
         this.description = description;
@@ -39,5 +39,29 @@ public class FreelanceListing {
 
     public String getPostedBy() {
         return postedBy;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    public void setPostedBy(String postedBy) {
+        this.postedBy = postedBy;
     }
 }
