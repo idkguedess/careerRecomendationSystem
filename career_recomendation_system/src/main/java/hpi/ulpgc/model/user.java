@@ -1,26 +1,28 @@
 package hpi.ulpgc.model;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
-    private final Long id;
+    private static int NEXT_ID = 0;
+    private final int id;
     private String name;
     private String email;
     private String password;
 
-    private String[] skills;
-    private String[] goals;
+    private final List<String> skills;
+    private final List<String> goals;
 
-    public User(Long id, String name, String email, String password, String[] skills, String[] goals) {
-        this.id = id;
+    public User(String name, String email, String password, String[] skills, String[] goals) {
+        this.id = NEXT_ID++;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.skills = skills;
-        this.goals = goals;
+        this.skills = new ArrayList<>();
+        this.goals = new ArrayList<>();
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -36,11 +38,11 @@ public class User {
         return password;
     }
 
-    public String[] getSkills() {
+    public List<String> getSkills() {
         return skills;
     }
 
-    public String[] getGoals() {
+    public List<String> getGoals() {
         return goals;
     }
 
@@ -56,22 +58,24 @@ public class User {
         this.password = password;
     }
 
-    public void setSkills(String[] skills) {
-        this.skills = skills;
+    public void addSkill(String skill) {
+
+        skills.add(skill);
     }
 
-    public void setGoals(String[] goals) {
-        this.goals = goals;
+    public void addGoal(String goal) {
+        goals.add(goal);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", skills=" + Arrays.toString(skills) +
-                ", goals=" + Arrays.toString(goals) +
+                ", skills=" + skills +
+                ", goals=" + goals +
                 '}';
     }
 }
