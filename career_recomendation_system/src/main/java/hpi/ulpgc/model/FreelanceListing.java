@@ -64,4 +64,16 @@ public class FreelanceListing {
     public void setPostedBy(User postedBy) {
         this.postedBy = postedBy;
     }
+
+    @Override
+    public String toString() {
+        return "FreelanceListing{" +
+                "title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", location='" + location + '\'' +
+                ", postedBy=" + postedBy.getName() +
+                '}';
+    }
 }
