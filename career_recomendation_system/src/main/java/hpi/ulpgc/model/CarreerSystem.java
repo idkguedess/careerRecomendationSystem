@@ -3,9 +3,9 @@ package hpi.ulpgc.model;
 import java.util.ArrayList;
 import java.util.List;
 
-class CarreerSystem {
-    List<User> users = new ArrayList<>();
-    List<Course> courses = new ArrayList<>();
+public class CarreerSystem {
+    public List<User> users = new ArrayList<>();
+    public List<Course> courses = new ArrayList<>();
     List<EducationalResource> resources = new ArrayList<>();
 
     public User createUser(String name, String email) {

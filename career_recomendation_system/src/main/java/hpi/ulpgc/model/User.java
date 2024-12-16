@@ -3,7 +3,7 @@ package hpi.ulpgc.model;
 import java.util.ArrayList;
 import java.util.List;
 
-class User {
+public class User {
     private static int NEXT_ID = 0;
     public final int id;
     public String name;

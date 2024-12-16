@@ -3,7 +3,7 @@ package hpi.ulpgc.model;
 import java.util.ArrayList;
 import java.util.List;
 
-class Course {
+public class Course {
     String title;
     String category;
     String description;
