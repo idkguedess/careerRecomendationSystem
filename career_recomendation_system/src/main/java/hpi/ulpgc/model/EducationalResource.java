@@ -3,7 +3,7 @@ package hpi.ulpgc.model;
 import java.util.List;
 import java.util.ArrayList;
 
-class EducationalResource {
+public class EducationalResource {
     public String title;
     public String description;
     public ResourceCategory category;

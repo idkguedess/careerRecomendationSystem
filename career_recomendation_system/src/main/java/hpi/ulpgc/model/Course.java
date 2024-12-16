@@ -27,6 +27,13 @@ public class Course {
         }
     }
 
+    public void removeUser(User user) {
+        if (users.contains(user)) {
+            users.remove(user);
+            user.removeCourse(this); // Mantener la bidireccionalidad
+        }
+    }
+
     public String getTitle() {
         return title;
     }

@@ -5,11 +5,14 @@ import java.util.List;
 
 public class CarreerSystem {
     public List<User> users = new ArrayList<>();
+    public List<String> skills = new ArrayList<>();
     public List<Course> courses = new ArrayList<>();
-    List<EducationalResource> resources = new ArrayList<>();
+    public List<EducationalResource> resources = new ArrayList<>();
 
     public User createUser(String name, String email) {
-        User newUser = new User(name, email);
+        List<String> initialSkills = new ArrayList<>();  // Crea listas vacías o inicialízalas según necesites
+        List<Course> initialCourses = new ArrayList<>();
+        User newUser = new User(name, email, (ArrayList<String>) initialSkills, (ArrayList<Course>) initialCourses);
         users.add(newUser);
         return newUser;
     }

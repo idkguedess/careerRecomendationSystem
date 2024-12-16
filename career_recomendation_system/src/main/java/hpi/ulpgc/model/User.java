@@ -8,8 +8,9 @@ public class User {
     public final int id;
     public String name;
     public String email;
-    public List<String> skill;
+    public List<String> skills;
     public List<Course> courses;
+    public List<EducationalResource> resources;
 
     public User(String name, String email, ArrayList<String> skills, ArrayList<Course> courses) {
         this.id = NEXT_ID++;
@@ -17,6 +18,7 @@ public class User {
         this.email = email;
         this.skills = new ArrayList<>();
         this.courses = new ArrayList<>();
+        this.resources = new ArrayList<>();
     }
 
     public void addCourse(Course course) {
@@ -29,7 +31,7 @@ public class User {
     public void removeCourse(Course course) {
         if (courses.contains(course)) {
             courses.remove(course);
-            course.removeParticipant(this); // Mantener la bidireccionalidad
+            course.removeUser(this); // Mantener la bidireccionalidad
         }
     }
 
