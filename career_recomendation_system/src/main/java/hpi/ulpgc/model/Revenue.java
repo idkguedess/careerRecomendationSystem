@@ -1,35 +1,27 @@
 package hpi.ulpgc.model;
 
-public class Revenue {
+class Revenue {
     private RevenueModel revenueModel;
-    private double value;
+    private double price;
 
-    public Revenue(RevenueModel revenueModel, double value) {
+    public Revenue(RevenueModel revenueModel, double price) {
         this.revenueModel = revenueModel;
-        this.value = value;
+        this.price = price;
     }
 
     public RevenueModel getRevenueModel() {
         return revenueModel;
     }
 
-    public double getValue() {
-        return value;
-    }
-
     public void setRevenueModel(RevenueModel revenueModel) {
         this.revenueModel = revenueModel;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+    public double getPrice() {
+        return price;
     }
 
-    @Override
-    public String toString() {
-        return "Revenue{" +
-                "revenueModel=" + revenueModel +
-                ", value=" + value +
-                '}';
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
